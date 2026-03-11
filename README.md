@@ -336,13 +336,6 @@ Admin Password : admin123
 ![Home Page](Screenshots/Home_Page.png)
 ![Review_Page](Screenshots/Review_Page.png)
 ![Admin_Dashboard](Screenshots/Admin_Dashboard.png)
----
-
-# Contributors
-
-Developed as part of the **Infinite Locus Assignment**.
-
----
 
 # License
 
