@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Star, MapPin, User } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 
 // Next.js 15: params is now a Promise
 export default async function BusinessPage({
@@ -46,14 +47,16 @@ export default async function BusinessPage({
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-8 md:py-12">
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border">
-              <img
+            <div className="w-full md:w-1/3 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border relative">
+              <Image
                 src={
                   photos[0] ||
                   'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800&h=600'
                 }
                 alt={business.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
+                priority
               />
             </div>
 

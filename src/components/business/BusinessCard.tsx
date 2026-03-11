@@ -1,20 +1,4 @@
-import Link from 'next/link'
-import { Card, CardContent, CardFooter } from '@/components/ui/card'
-import { Star } from 'lucide-react'
-
-interface BusinessCardProps {
-  business: {
-    id: string
-    name: string
-    category: string
-    address: string
-    city: string
-    photos: string
-    _count?: {
-      reviews: number
-    }
-  }
-}
+import Image from 'next/image'
 
 export function BusinessCard({ business }: BusinessCardProps) {
   const photos = JSON.parse(business.photos || '[]')
@@ -24,10 +8,12 @@ export function BusinessCard({ business }: BusinessCardProps) {
     <Link href={`/b/${business.id}`}>
       <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow border-gray-100 group">
         <div className="aspect-[4/3] overflow-hidden relative">
-          <img 
+          <Image 
             src={mainPhoto} 
             alt={business.name} 
-            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute top-3 left-3">
             <Badge className="bg-white/90 text-black hover:bg-white">{business.category}</Badge>
