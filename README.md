@@ -330,9 +330,12 @@ Potential improvements for the platform:
 
 
 ```
-
+Admin Id : admin@example.com
+Admin Password : admin123
 ```
-
+![Home Page](Screenshots/Home_Page.png)
+![Review_Page](Screenshots/Review_Page.png)
+![Admin_Dashboard](Screenshots/Admin_Dashboard.png)
 ---
 
 # Contributors
