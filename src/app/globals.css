@@ -4,6 +4,27 @@
   --font-sans: var(--font-inter);
 }
 
+/* Force hide ALL Next.js Dev Indicators, Overlays, and Tooltips */
+#nextjs-portal,
+div[portal-id="nextjs-portal"],
+nextjs-portal,
+.nextjs-toast-errors-parent,
+.nextjs-static-indicator,
+[data-nextjs-toast],
+[data-nextjs-dialog],
+[data-nextjs-portal],
+#nextjs-portal,
+div[class*="nextjs-"],
+div[id*="nextjs-"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;
